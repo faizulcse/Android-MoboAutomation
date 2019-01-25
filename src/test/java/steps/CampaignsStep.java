@@ -9,13 +9,12 @@ public class CampaignsStep {
 
     @Given("^I am on the campaigns mobile view$")
     public void i_am_on_the_campaigns_mobile_view() throws Throwable {
-       new TestPage().loginClick();
+        new TestPage().testClick();
     }
 
     @Then("^I should see the \"(.*?)\" page$")
     public void i_should_see_the_page(String arg1) throws Throwable {
-        new TestPage().testClick();
-        //System.out.println("yrstdfjghk");
+        new TestPage().loginClick();
     }
 
     @Then("^I should see a create campaign iconoing, Completed$")
