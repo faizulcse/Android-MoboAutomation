@@ -39,7 +39,7 @@ public class DriverSetUp {
             driver = new RemoteWebDriver(new URL(prop.getProperty("serverURL")), cap);
             setDriver(driver);
         }
-        catch (IOException e) {
+        catch (Exception e) {
             System.out.println(AppConstant.APPIUM_ERROR);
             System.out.println(AppConstant.DEVICE_CONFIG_ERROR);
             System.exit(0);
