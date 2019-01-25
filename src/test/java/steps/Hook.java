@@ -3,18 +3,17 @@ package steps;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import helper.DriverSetUp;
-import org.openqa.selenium.WebDriver;
 
-public class Hook extends DriverSetUp {
+public class Hook {
 
     @Before()
     public void setUp(){
-        startDriver();
+        DriverSetUp.getInstanc().startDriver();
     }
 
     @After()
     public void tearDown(){
-        stopDriver();
+        DriverSetUp.getInstanc().stopDriver();
     }
 
 }

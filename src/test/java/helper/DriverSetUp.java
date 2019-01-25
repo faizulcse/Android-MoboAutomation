@@ -10,8 +10,18 @@ import java.net.URL;
 import java.util.Properties;
 
 public class DriverSetUp {
-    public WebDriver driver;
-    public Properties prop = null;
+
+    public static WebDriver driver;
+    public static Properties prop = null;
+    public static DriverSetUp instanc = null;
+
+    public static DriverSetUp getInstanc(){
+        if (instanc == null){
+            instanc = new DriverSetUp();
+            //instanc.startDriver();
+        }
+        return instanc;
+    }
 
     public void startDriver() {
         try {
@@ -30,8 +40,8 @@ public class DriverSetUp {
             setDriver(driver);
         }
         catch (IOException e) {
-            System.out.println("[ERROR] Please check that appium server is running OR device is connected");
-            System.out.println("[ERROR] Please check that \"Config >> android.conf\" info is correct");
+            System.out.println(AppConstant.APPIUM_ERROR);
+            System.out.println(AppConstant.DEVICE_CONFIG_ERROR);
             System.exit(0);
         }
     }

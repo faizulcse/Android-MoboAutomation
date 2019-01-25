@@ -3,11 +3,11 @@ package pages;
 import helper.DriverSetUp;
 import org.openqa.selenium.WebDriver;
 
-public class BasePage extends DriverSetUp{
+public class BasePage{
     public WebDriver driver;
 
     public BasePage() {
-        driver = getDriver();
+        driver = DriverSetUp.getInstanc().getDriver();
     }
 
     public void waitFor(double second) {

@@ -3,8 +3,7 @@ package steps;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import org.apache.log4j.Logger;
-import pages.TestPage;
+import pages.android.TestPage;
 
 public class CampaignsStep {
 

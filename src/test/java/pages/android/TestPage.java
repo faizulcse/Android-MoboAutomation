@@ -1,4 +1,4 @@
-package pages;
+package pages.android;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,5 +32,4 @@ public class TestPage extends BasePage {
         }
         loginButton.click();
     }
-
 }
