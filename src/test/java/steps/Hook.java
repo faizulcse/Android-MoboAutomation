@@ -4,16 +4,16 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import helper.DriverSetUp;
 
-public class Hook {
+public class Hook extends DriverSetUp{
 
     @Before()
     public void setUp(){
-        DriverSetUp.getInstanc().startDriver();
+        startDriver();
     }
 
     @After()
     public void tearDown(){
-        DriverSetUp.getInstanc().stopDriver();
+        stopDriver();
     }
 
 }

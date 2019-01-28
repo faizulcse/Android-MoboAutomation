@@ -7,7 +7,6 @@ import pages.BasePage;
 
 public class TestPage extends BasePage {
     public TestPage(){
-        super();
         PageFactory.initElements(driver, this);
     }
 
